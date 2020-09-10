@@ -6,9 +6,6 @@ const emptyChar = '⠀';
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
 bot.start((ctx) => ctx.reply('Welcome!'))
 bot.help((ctx) => getCovidData(ctx))
-    // bot.help((ctx) => ctx.reply('Send me a sticker'))
-    // bot.on('sticker', (ctx) => ctx.reply('👍'))
-    // bot.hears('hii', (ctx) => ctx.reply('Hey there'))
 bot.launch()
 
 function getCovidData(ctx) {
@@ -49,6 +46,5 @@ Vefat: ${covid.toplam_vefat}
 Zatürre: %${covid.hastalarda_zaturre_oran}
 Ağır hasta: ${covid.agir_hasta_sayisi}
 `
-        // return `${emptyChar}\n${emptyChar}\n${smsText}\n${emptyChar}\n${emptyChar}`;
     return `${smsText}`;
 }
