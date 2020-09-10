@@ -1,0 +1,26 @@
+name: Daily
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Do work
+    if: "!contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: NPM ops
+      shell: bash
+      run: |
+        yarn
+        yarn start
+      env:
+        CI: true
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
