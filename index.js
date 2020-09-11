@@ -4,6 +4,9 @@ require('dotenv').config();
 
 const emptyChar = '⠀';
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
+bot.catch((err, ctx) => {
+    console.log(`Ooops, encountered an error for ${ctx.updateType}`, err)
+})
 bot.start((ctx) => ctx.reply('Welcome !'))
 bot.help((ctx) => getCovidData(ctx))
 bot.launch()
