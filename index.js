@@ -22,6 +22,7 @@ function evalRes(res, ctx) {
     let networkCovid = createCovidObject(res);
     const smsText = createSmsText(networkCovid);
     ctx.reply(smsText);
+    console.log("Replied", smsText)
 }
 
 function createCovidObject(res) {

@@ -8,6 +8,9 @@
         "node-fetch": "^2.6.1",
         "telegraf": "^3.38.0"
     },
+    "engines": {
+        "node": "12.x"
+    },
     "scripts": {
         "start": "node ./index.js"
     }
