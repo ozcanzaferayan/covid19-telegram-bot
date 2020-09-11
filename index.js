@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const emptyChar = '⠀';
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
-bot.start((ctx) => ctx.reply('Welcome!'))
+bot.start((ctx) => ctx.reply('Welcome !'))
 bot.help((ctx) => getCovidData(ctx))
 bot.launch()
 
