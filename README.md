@@ -1,6 +1,6 @@
 # Covid19 Bot
 
-Covid19 Bot is Github Action that creates Telegram bot and sends Turkey covid info when /help command given .
+Covid19 Bot is Github Action that creates Telegram bot and sends Turkey covid info when /help command given.
 
 ## Screenshot
 
