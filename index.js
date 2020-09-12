@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 express()
     //.use(express.static(path.join(__dirname, 'public')))
-    .get('/', (req, res) => res.send("It Works"))
+    .get('/', (req, res) => res.send("<h1>It Works</h1>"))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 const emptyChar = '⠀';
