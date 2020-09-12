@@ -23,10 +23,15 @@ This is Telegram bot that sends Turkey covid info when /help command given.
 heroku config:set TELEGRAM_BOT_TOKEN=your_bot_token -a your_heroku_app_name
 ```
 
-5. Add git remote for heroku CLI
+5. Add git remote for using heroku CLI without -a parameter
 
 ```bash
 heroku git:remote -a your_app_name
+```
+
+6. For remove message on push: "This repository moved. Please use the new location:"
+```bash
+git remote set-url origin your_github_repo_url_with_git_extension
 ```
 
 ## Contributing
